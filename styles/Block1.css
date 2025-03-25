@@ -1,0 +1,124 @@
+.Block1{
+    display: flex;
+    width: 100%;
+    height: 546px;
+    justify-content: space-between;
+    margin-bottom: 250px;
+    align-items: center;
+}
+.ImgBlock1{
+    background-image: url(../img/Reichstag.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 100%;
+    border-radius: 5%;
+    width: 55%;
+    height: 90%;
+}
+.TextAndButtonBlock1{
+    width: 41.118%;
+    height: 60.62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.TextBlock1Father{
+    width: 100%;
+    height: 47.15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Text1Block1{
+    width: 100%;
+    height: 50%;
+}
+.TextInBlock1{
+margin-bottom: 0;
+font-size: 20px;
+}
+.Text2Block1{
+    width: 100%;
+    height: 50%;
+}
+.RegOnConsultationButton1{
+    width: 100%;
+    height: 100px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.RegOnConsultationButton1:before {
+    content: '';
+    background: linear-gradient(to right, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.RegOnConsultationButton1:active {
+    color: white
+}
+
+.RegOnConsultationButton1:active:after {
+    background: transparent;
+}
+
+.RegOnConsultationButton1:hover:before {
+    opacity: 1;
+}
+
+.RegOnConsultationButton1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#e6a260;
+    ;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@media (max-width: 768px) {
+    .Block1 {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 100px;
+    }
+    
+    .ImgBlock1 {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        background-image: none;
+        background-color: #36393F;
+    }
+    
+    .TextAndButtonBlock1 {
+        width: 100%;
+    }
+}

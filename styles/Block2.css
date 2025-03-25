@@ -1,0 +1,130 @@
+.Block2{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 250px;
+   
+}
+.TextBlock2Father{
+    display: flex;
+    flex-direction: column;
+    height: 21.756%;
+    width: 100%;
+    align-items: center;
+}
+.Text1Block2{
+    height: 50%;
+    width: 53.552%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.TextInBlock2{
+font-size: 20px;
+text-align: center;
+}
+.Text2Block2{
+    height: 50%;
+    width: 53.552%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.Text2InBlock2{
+font-size: 20px;
+text-align: center;
+}
+.Block2Father{
+    width: 100%;
+    height: 64.87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.ImgBlock2{
+    width: 24.940%;
+    height: 56.62%;
+    background-image: url(../img/flag.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50px;
+  
+}
+
+.LeftSideBlock2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 64.8%;
+    width: 30.92%;
+}
+.HelpBlock{
+    width: 76.808%;
+    height: 22.993%;
+    background: linear-gradient(135deg, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
+    margin-left: 23.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.HelpBlockMiddle{
+    width: 76.808%;
+    height: 22.993%;
+    background: linear-gradient(135deg, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.HelpBlockInner{
+background-color: #36393F;
+height: 86.58%;
+width: 94.46%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+.HelpBlockText{
+text-align: center;
+margin-bottom: 0px;    
+}
+.RightSideBlock2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 64.8%;
+    width: 30.92%;  
+}
+@media (max-width: 768px) {
+    .Block2 {
+        height: auto;
+        padding: 30px 0;
+    }
+    
+    .Block2Father {
+        flex-direction: column;
+    }
+    
+    .LeftSideBlock2, .RightSideBlock2, .ImgBlock2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .HelpBlock, .HelpBlockMiddle {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .ImgBlock2 {
+        height: 200px;
+        background-image: none;
+        background-color: #36393F;
+        order: -1;
+    }
+}

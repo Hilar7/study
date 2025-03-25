@@ -1,0 +1,176 @@
+.Block5{
+    width: 100%;
+    height: 509px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 600px;
+    user-select: none;
+}
+.ImageBlock5{
+    width: 46.38%;
+    height: 100%;
+    border-radius: 50px;
+    background-image: url(../img/gate.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}
+.FormBlock5{
+    width: 49.382%;
+    height: 100%;
+    background: linear-gradient(to right, #A25532, #DB8C3D, #FFBC4D, #FDE56D);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+}
+.FieldBlock{
+    width: 75%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.InputField{
+    width: 100%;
+    height: 30%;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+}
+input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #cfcfcf;
+    border-radius: 50px;
+    outline: none;
+    background-color: #d9d9d9;   
+    color: #333;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+input[type="text"]::placeholder {
+    color: #ffffff;
+    font-style: italic;
+}
+input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+.glowing-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+.glowing-input:focus {
+    border-color: transparent;
+    animation: glowing-border 2s infinite;
+}
+
+@keyframes glowing-border {
+    0% {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px #007BFF;
+    }
+    25% {
+        border-color: #208bfe;
+        box-shadow: 0 0 5px #208bfe;
+    }
+    50% {
+        border-color: #4ea3ff;
+        box-shadow: 0 0 20px #4ea3ff;
+    }
+    75% {
+        border-color: #208bfe;
+        box-shadow: 0 0 20px #208bfe;
+    }
+    100% {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px #007BFF;
+    }
+}
+.RegOnConsultationButton2{
+    width: 75%;
+    height: 12%;
+    border: none;
+    outline: none;
+    color: #d9d9d9;
+    background: #36393F;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.RegOnConsultationButton2:before {
+    content: '';
+    background: linear-gradient(to right, #007BFF, #208bfe, #4ea3ff, #007BFF);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+}
+
+.RegOnConsultationButton2:active {
+   color:#ffffff;
+}
+
+.RegOnConsultationButton2:active:after {
+    background: transparent;
+}
+
+.RegOnConsultationButton2:hover:before {
+    opacity: 1;
+}
+
+.RegOnConsultationButton2:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #36393F;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@media (max-width: 768px) {
+    .Block5 {
+        flex-direction: column;
+        height: 500px;
+        margin-bottom: 75px;
+        user-select: none;
+    }
+    
+    .ImageBlock5, .FormBlock5 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .ImageBlock5 {
+        display: none;
+    }
+}
