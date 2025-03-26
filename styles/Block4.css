@@ -83,12 +83,12 @@ align-items: center;
     
     .TextUnderMarkGradient {
         width: 95%;
-        height: 110px;
+        height: 200px;
         margin-top: 15px;
     }
     .TextInTextUnderMark{
         width: 100%;
-        height: 200px;
+        height: 180px;
         margin-bottom: 0px;
         display: flex;
         justify-content: center;
