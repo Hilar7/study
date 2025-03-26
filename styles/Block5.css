@@ -25,6 +25,7 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 50px;
+    position: relative;
 }
 .FieldBlock{
     width: 75%;
@@ -48,7 +49,7 @@ input[type="text"] {
     border-radius: 50px;
     outline: none;
     background-color: #d9d9d9;   
-    color: #333;
+    color: #ffffff;
     transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
 input[type="text"]::placeholder {
@@ -66,7 +67,7 @@ input[type="text"]:focus {
     border: 2px solid transparent;
     border-radius: 5px;
     outline: none;
-    color: #333;
+    color: #ffffff;
     background-color: #f0f0f0;
     transition: border-color 0.3s ease;
 }
@@ -151,6 +152,29 @@ input[type="text"]:focus {
     top: 0;
     border-radius: 50px;
 }
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(54, 57, 63, 0.9);
+    padding: 20px 40px;
+    border-radius: 50px;
+    color: #FDE56D;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.success-message.show {
+    opacity: 1;
+    visibility: visible;
+}
 
 @keyframes glowing {
     0% { background-position: 0 0; }
@@ -161,7 +185,7 @@ input[type="text"]:focus {
     .Block5 {
         flex-direction: column;
         height: 500px;
-        margin-bottom: 75px;
+        margin-bottom: 500px;
         user-select: none;
     }
     

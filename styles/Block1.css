@@ -97,6 +97,11 @@ font-size: 20px;
     top: 0;
     border-radius: 10px;
 }
+.RegOnConsultationButton1.clicked {
+    transform: scale(0.95);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
 
 @keyframes glowing {
     0% { background-position: 0 0; }

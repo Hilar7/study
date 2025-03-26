@@ -210,6 +210,12 @@
             <div class="Block5" id="online-registration"> <!--5-й блок-->
             <div class="ImageBlock5"></div>
             <div class="FormBlock5">
+                <div class="success-message">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="#4CAF50">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    <p>Отправлено!</p>
+                </div>
             <div class="FieldBlock">
                 <div class="InputField">
                 <input type="text" placeholder="Введите текст" class="glowing-input">
@@ -223,7 +229,6 @@
             </div>
             </div>
             <div class="CommentBlock" id="reviews">
-                <!-- Десктопная версия (скрывается на мобильных) -->
                 <div class="desktop-carousel d-none d-md-block">
                     <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner">
@@ -344,37 +349,11 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const burgerToggle = document.getElementById('burger-toggle');
-            const burgerLinks = document.querySelectorAll('.burger-link');
-            
-            burgerLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    // Закрываем меню
-                    burgerToggle.checked = false;
-                    document.querySelector('.mobile-menu .menu').style.boxShadow = 'none';
-                    document.querySelector('.burger-nav').style.opacity = '0';
-                    document.querySelector('.burger-nav').style.visibility = 'hidden';
-                    document.querySelector('.burger-nav').style.pointerEvents = 'none';
-                    
-                    // Плавная прокрутка к целевому блоку
-                    setTimeout(() => {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }, 300); // Небольшая задержка для анимации закрытия меню
-                });
-            });
-        });
-        </script>
+   
 </body>
-<script src="script.js"></script>
+<script src="javascript/reload.js"></script>
+<script src="javascript/burger.js"></script>
+<script src="javascript/RegOnConsultation.js"></script>
 </html>     
 
 

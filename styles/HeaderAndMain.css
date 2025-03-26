@@ -228,7 +228,7 @@ margin-bottom: 0px;
 
 .mobile-menu .menu {
     position: absolute; /* Изменено с fixed на absolute */
-    right: -300px;
+    right: -30vw;
     top: -80px;
     z-index: 100;
     width: 50px;
@@ -326,6 +326,15 @@ margin-bottom: 0px;
         -1px 1px 0 black,
         1px 1px 0 black;
     padding: 0.5em 0;
+}
+.mobile-menu .menu.closed {
+    box-shadow: none !important;
+}
+
+.mobile-menu .burger-nav.closed {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 
 /* Показываем только на мобильных */
