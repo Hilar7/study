@@ -67,6 +67,7 @@ align-items: center;
 }
 .TextInTextUnderMark{
     font-size: 20px;
+    text-align: center;
 }
 @media (max-width: 768px) {
     .Block4 {

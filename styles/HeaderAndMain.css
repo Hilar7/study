@@ -204,7 +204,7 @@ margin-bottom: 0px;
     .LogoName {
         width: 100%;
         justify-content: flex-start;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
     
     .Nav {
@@ -219,7 +219,6 @@ margin-bottom: 0px;
     }
 }
 
-/* Обновленный стиль для мобильного меню */
 .mobile-menu {
     position: relative;
     z-index: 1000;
@@ -227,7 +226,7 @@ margin-bottom: 0px;
 }
 
 .mobile-menu .menu {
-    position: absolute; /* Изменено с fixed на absolute */
+    position: absolute;
     right: -30vw;
     top: -80px;
     z-index: 100;
@@ -271,7 +270,7 @@ margin-bottom: 0px;
 
 .mobile-menu input:checked + .menu {
     box-shadow: 0 0 0 100vw #36393F, 0 0 0 100vh #36393F;
-    position: fixed; /* Только при открытии меню становится fixed */
+    position: fixed; 
     right: 20px;
     top: 20px;
     border-radius: 0;
@@ -298,19 +297,19 @@ margin-bottom: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    visibility: hidden; /* Добавлено для полного скрытия */
+    visibility: hidden; 
     transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
     list-style: none;
     padding: 0;
     text-align: center;
     width: 100%;
-    pointer-events: none; /* Отключаем клики когда меню закрыто */
+    pointer-events: none;
 }
 
 .mobile-menu input:checked ~ .burger-nav {
     opacity: 1;
-    visibility: visible; /* Показываем когда меню открыто */
-    pointer-events: auto; /* Включаем клики когда меню открыто */
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .mobile-menu .burger-nav a {
@@ -337,16 +336,15 @@ margin-bottom: 0px;
     pointer-events: none !important;
 }
 
-/* Показываем только на мобильных */
 @media (max-width: 767px) {
     .mobile-menu {
         display: block;
-        width: 50px; /* Фиксированная ширина для бургер-кнопки */
+        width: 50px; 
         height: 50px;
     }
     
     .Header {
-        position: relative; /* Для правильного позиционирования бургер-кнопки */
+        position: relative;
     }
     
     .Nav {
