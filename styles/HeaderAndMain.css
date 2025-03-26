@@ -188,9 +188,9 @@ margin-bottom: 0px;
     
     .Header {
         flex-direction: column;
-        height: auto;
+        height: 100px;
         padding: 15px 0;
-        width: 100%;
+        width: 100vw;
     }
     
     .LogoName {

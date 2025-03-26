@@ -109,16 +109,28 @@ font-size: 20px;
         height: auto;
         margin-bottom: 100px;
     }
+    .TextInBlock1{
+        margin-bottom: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .Text2Block1{
+        margin-bottom: 50px;
+    }
     
     .ImgBlock1 {
-        width: 100%;
-        height: 200px;
-        margin-bottom: 20px;
-        background-image: none;
-        background-color: #36393F;
+      display: none;
     }
     
     .TextAndButtonBlock1 {
         width: 100%;
+    }
+    .RegOnConsultationButton1{
+        width: 70%;
+    }
+    .TextAndButtonBlock1{
+        display: flex;
+        align-items: center;
     }
 }

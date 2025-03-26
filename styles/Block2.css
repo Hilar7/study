@@ -110,21 +110,31 @@ margin-bottom: 0px;
     .Block2Father {
         flex-direction: column;
     }
-    
-    .LeftSideBlock2, .RightSideBlock2, .ImgBlock2 {
+    .ImgBlock2{
+        display: none;
+    }
+    .LeftSideBlock2, .RightSideBlock2 {
         width: 100%;
-        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
     }
     
     .HelpBlock, .HelpBlockMiddle {
-        width: 100%;
+        width: 80%;
+        height: 100px;
         margin-left: 0;
+        margin-bottom: 50px;
     }
-    
-    .ImgBlock2 {
-        height: 200px;
-        background-image: none;
+    .HelpBlockInner{
         background-color: #36393F;
-        order: -1;
+    height: 86.58%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    }
+    .Text2Block2{
+        margin-bottom: 50px;
     }
 }

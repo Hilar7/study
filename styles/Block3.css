@@ -82,6 +82,10 @@ border-radius: 50px;
         height: auto;
         padding: 15px;
     }
+    .Table1Block3{
+        width: 100%;
+        height: 100%;
+    }
     
     .PointAndText {
         margin: 15px 0;
