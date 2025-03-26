@@ -57,17 +57,31 @@
     <div class="WebsitePanel"> <!-- Панель сайта-->
         <div class="Header">
             <div class="LogoName">
-            <img src="img/logo.svg" alt="" class="Logo" onclick="location.reload();">
-            <div class="NameBlock">
-                <h1 class="Name">Deutsch <br> Profi</h1>
+                <img src="img/logo.svg" alt="" class="Logo" onclick="location.reload();">
+                <div class="NameBlock">
+                    <h1 class="Name">Deutsch <br> Profi</h1>
+                </div>
             </div>
+            
+            <!-- Десктопное меню -->
+            <div class="Nav d-none d-md-flex">
+                <a href="#about-lessons" class="NavButton1">О занятиях</a>
+                <a href="#about-method" class="NavButton2">О методике</a>
+                <a href="#online-registration" class="NavButton3">Онлайн-запись</a>
+                <a href="#reviews" class="NavButton4">Отзывы</a>
             </div>
-            <div class="Nav">
-                <p class="NavButton1">О занятиях</p>
-                <p class="NavButton2">О методике</p>
-                <p class="NavButton3">Онлайн-запись</p>
-                <p class="NavButton4">Отзывы</p>
-            </div>
+            
+            <!-- Мобильное бургер-меню -->
+            <label class="mobile-menu d-block d-md-none">
+                <input type="checkbox" id="burger-toggle">
+                <span class="menu"><span class="hamburger"></span></span>
+                <ul class="burger-nav">
+                    <li><a href="#about-lessons" class="burger-link">О занятиях</a></li>
+                    <li><a href="#about-method" class="burger-link">О методике</a></li>
+                    <li><a href="#online-registration" class="burger-link">Онлайн-запись</a></li>
+                    <li><a href="#reviews" class="burger-link">Отзывы</a></li>
+                </ul>
+            </label>
         </div>
         <div class="Block1"> <!--1-й блок-->
             <div class="ImgBlock1"></div>
@@ -83,7 +97,7 @@
         
         </div>
         </div>
-    <div class="Block2"> <!--2-й блок-->
+    <div class="Block2" id="about-lessons"> <!--2-й блок-->
         <div class="TextBlock2Father">
         <div class="Text1Block2">
             <p class="TextInBlock2">Занятия немецким языком с нами удобны,<br> интересны и результативны.</p>
@@ -123,7 +137,7 @@
         </div>
     </div>
 
-            <div class="Block3"> <!--3-й блок-->
+            <div class="Block3" id="about-method"> <!--3-й блок-->
                 <div class="Text1Block3">
                     <p class="TextInText1InBlock3">Наша методика подойдет вам если:</p>
                 </div>
@@ -193,7 +207,7 @@
             </div>
 
 
-            <div class="Block5"> <!--5-й блок-->
+            <div class="Block5" id="online-registration"> <!--5-й блок-->
             <div class="ImageBlock5"></div>
             <div class="FormBlock5">
             <div class="FieldBlock">
@@ -208,7 +222,7 @@
             <button class="RegOnConsultationButton2"> Записаться на консультацию</button>
             </div>
             </div>
-            <div class="CommentBlock">
+            <div class="CommentBlock" id="reviews">
                 <!-- Десктопная версия (скрывается на мобильных) -->
                 <div class="desktop-carousel d-none d-md-block">
                     <div id="carouselExample" class="carousel slide">
@@ -330,6 +344,35 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerToggle = document.getElementById('burger-toggle');
+            const burgerLinks = document.querySelectorAll('.burger-link');
+            
+            burgerLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    // Закрываем меню
+                    burgerToggle.checked = false;
+                    document.querySelector('.mobile-menu .menu').style.boxShadow = 'none';
+                    document.querySelector('.burger-nav').style.opacity = '0';
+                    document.querySelector('.burger-nav').style.visibility = 'hidden';
+                    document.querySelector('.burger-nav').style.pointerEvents = 'none';
+                    
+                    // Плавная прокрутка к целевому блоку
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 300); // Небольшая задержка для анимации закрытия меню
+                });
+            });
+        });
+        </script>
 </body>
 <script src="script.js"></script>
 </html>     

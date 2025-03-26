@@ -189,13 +189,21 @@ margin-bottom: 0px;
     .Header {
         flex-direction: column;
         height: 100px;
-        padding: 15px 0;
+        padding: 5px 0;
         width: 100vw;
+    }
+    .Logo{
+        width: 10%;
+        height: 100%;
+        margin-left: 50px;
+    }
+    .Name{
+        margin-left: 20px;
     }
     
     .LogoName {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
         margin-bottom: 15px;
     }
     
@@ -208,5 +216,131 @@ margin-bottom: 0px;
         width: 45%;
         margin: 5px;
         text-align: center;
+    }
+}
+
+/* Обновленный стиль для мобильного меню */
+.mobile-menu {
+    position: relative;
+    z-index: 1000;
+    display: none;
+}
+
+.mobile-menu .menu {
+    position: absolute; /* Изменено с fixed на absolute */
+    right: -300px;
+    top: -80px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #A25532, #DB8C3D);
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
+}
+
+.mobile-menu .hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 2px;
+    background: #FDE56D;
+    display: block;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+}
+
+.mobile-menu .hamburger:after,
+.mobile-menu .hamburger:before {
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #FDE56D;
+}
+
+.mobile-menu .hamburger:before { top: -8px; }
+.mobile-menu .hamburger:after { bottom: -8px; }
+
+.mobile-menu input { display: none; }
+
+.mobile-menu input:checked + .menu {
+    box-shadow: 0 0 0 100vw #36393F, 0 0 0 100vh #36393F;
+    position: fixed; /* Только при открытии меню становится fixed */
+    right: 20px;
+    top: 20px;
+    border-radius: 0;
+}
+
+.mobile-menu input:checked + .menu .hamburger {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile-menu input:checked + .menu .hamburger:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+.mobile-menu input:checked + .menu .hamburger:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.mobile-menu .burger-nav {
+    z-index: 200;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden; /* Добавлено для полного скрытия */
+    transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* Отключаем клики когда меню закрыто */
+}
+
+.mobile-menu input:checked ~ .burger-nav {
+    opacity: 1;
+    visibility: visible; /* Показываем когда меню открыто */
+    pointer-events: auto; /* Включаем клики когда меню открыто */
+}
+
+.mobile-menu .burger-nav a {
+    margin-bottom: 2em;
+    display: block;
+    color: #FDE56D;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Russo One', sans-serif;
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    padding: 0.5em 0;
+}
+
+/* Показываем только на мобильных */
+@media (max-width: 767px) {
+    .mobile-menu {
+        display: block;
+        width: 50px; /* Фиксированная ширина для бургер-кнопки */
+        height: 50px;
+    }
+    
+    .Header {
+        position: relative; /* Для правильного позиционирования бургер-кнопки */
+    }
+    
+    .Nav {
+        display: none !important;
     }
 }
