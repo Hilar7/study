@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 250px;
+    font-size: 24px;
    
 }
 .TextBlock2Father{
@@ -63,23 +64,25 @@ text-align: center;
     width: 30.92%;
 }
 .HelpBlock{
-    width: 76.808%;
-    height: 22.993%;
+    width: 83.808%;
+    height: 27.993%;
     background: linear-gradient(135deg, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
     margin-left: 23.2%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    font-size: 20px;
 }
 .HelpBlockMiddle{
-    width: 76.808%;
-    height: 22.993%;
+    width: 83.808%;
+    height: 27.993%;
     background: linear-gradient(135deg, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    font-size: 20px;
 }
 .HelpBlockInner{
 background-color: #36393F;
@@ -121,7 +124,7 @@ margin-bottom: 0px;
     
     .HelpBlock, .HelpBlockMiddle {
         width: 80%;
-        height: 100px;
+        height: 150px;
         margin-left: 0;
         margin-bottom: 50px;
     }

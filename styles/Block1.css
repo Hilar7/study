@@ -18,10 +18,10 @@
 }
 .TextAndButtonBlock1{
     width: 41.118%;
-    height: 60.62%;
+    height: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .TextBlock1Father{
     width: 100%;
@@ -34,9 +34,13 @@
     width: 100%;
     height: 50%;
 }
-.TextInBlock1{
+.Block1Text1{
+margin-bottom: 20px;
+font-size: 40px;
+}
+.Block1Text2{
 margin-bottom: 0;
-font-size: 20px;
+font-size: 26px;
 }
 .Text2Block1{
     width: 100%;
@@ -54,6 +58,7 @@ font-size: 20px;
     z-index: 0;
     border-radius: 10px;
     user-select: none;
+    margin-top: 100px;
 }
 
 .RegOnConsultationButton1:before {
@@ -116,9 +121,10 @@ font-size: 20px;
     }
     .TextInBlock1{
         margin-bottom: 0;
-        font-size: 20px;
+        font-size: 24px;
         display: flex;
         justify-content: center;
+        text-align: center;
     }
     .Text2Block1{
         margin-bottom: 50px;
@@ -132,7 +138,8 @@ font-size: 20px;
         width: 100%;
     }
     .RegOnConsultationButton1{
-        width: 70%;
+        width: 80%;
+        font-size: 20px;
     }
     .TextAndButtonBlock1{
         display: flex;

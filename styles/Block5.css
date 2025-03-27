@@ -40,7 +40,7 @@
     background-color: #d9d9d9;
     border-radius: 50px;
 }
-input[type="text"] {
+input[type="text"], input[type="email"]{
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -52,11 +52,11 @@ input[type="text"] {
     color: #ffffff;
     transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
-input[type="text"]::placeholder {
+input[type="text"]::placeholder, input[type="email"]::placeholder {
     color: #ffffff;
     font-style: italic;
 }
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="email"]:focus {
     border-color: #007BFF;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
 }
@@ -70,6 +70,16 @@ input[type="text"]:focus {
     color: #ffffff;
     background-color: #f0f0f0;
     transition: border-color 0.3s ease;
+}
+.glowing-input::placeholder {
+    color: #ffffff;
+    font-style: italic;
+    opacity: 1; /* По умолчанию плейсхолдер виден */
+    transition: opacity 0.3s ease; /* Плавное исчезновение */
+}
+
+.glowing-input:focus::placeholder {
+    opacity: 0; /* При фокусе плейсхолдер становится прозрачным */
 }
 
 .glowing-input:focus {

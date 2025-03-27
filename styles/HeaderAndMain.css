@@ -9,6 +9,7 @@
     1px -1px 0 black,
     -1px 1px 0 black,
     1px 1px 0 black;
+    font-size: 24px;
 }
 
         .MainFrame{
@@ -41,7 +42,6 @@
     background: linear-gradient(to right, #A25532, #DB8C3D, #FFBC4D, #FDE56D);
     align-items: center;
 }
-
 .LogoName{
     width: 30%;
     height: 95%;
@@ -74,21 +74,29 @@ align-items: center;
 width: 21%;
 font-size: 20px;
 margin-bottom: 0px;
+text-decoration: none;
+color: white;
 }
 .NavButton2{
 width: 22%;
 font-size: 20px;
 margin-bottom: 0px;
+text-decoration: none;
+color: white;
 }
 .NavButton3{
 width: 30%;
 font-size: 20px;
 margin-bottom: 0px;
+text-decoration: none;
+color: white;
 }
 .NavButton4{
 width: 16%;
 font-size: 20px;
 margin-bottom: 0px;
+text-decoration: none;
+color: white;
 }
 
 .loader {
@@ -204,7 +212,7 @@ margin-bottom: 0px;
     .LogoName {
         width: 100%;
         justify-content: flex-start;
-        margin-bottom: 5px;
+        align-items: center;
     }
     
     .Nav {
@@ -228,7 +236,7 @@ margin-bottom: 0px;
 .mobile-menu .menu {
     position: absolute;
     right: -30vw;
-    top: -80px;
+    top: -75px;
     z-index: 100;
     width: 50px;
     height: 50px;
@@ -336,7 +344,7 @@ margin-bottom: 0px;
     pointer-events: none !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .mobile-menu {
         display: block;
         width: 50px; 
