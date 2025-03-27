@@ -279,7 +279,7 @@ color: white;
 .mobile-menu input:checked + .menu {
     box-shadow: 0 0 0 100vw #36393F, 0 0 0 100vh #36393F;
     position: fixed; 
-    right: 83px;
+    right: 20px;
     top: 20px;
     border-radius: 0;
 }
