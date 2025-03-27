@@ -201,7 +201,7 @@ color: white;
         width: 100vw;
     }
     .Logo{
-        width: 10%;
+        width: 15%;
         height: 100%;
         margin-left: 50px;
     }
@@ -279,7 +279,7 @@ color: white;
 .mobile-menu input:checked + .menu {
     box-shadow: 0 0 0 100vw #36393F, 0 0 0 100vh #36393F;
     position: fixed; 
-    right: 20px;
+    right: 83px;
     top: 20px;
     border-radius: 0;
 }
@@ -321,7 +321,7 @@ color: white;
 }
 
 .mobile-menu .burger-nav a {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     display: block;
     color: #FDE56D;
     text-decoration: none;
