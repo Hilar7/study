@@ -235,8 +235,8 @@ color: white;
 
 .mobile-menu .menu {
     position: absolute;
-    right: -30vw;
-    top: -75px;
+    right: -35vw;
+    top: -70px;
     z-index: 100;
     width: 50px;
     height: 50px;
@@ -321,7 +321,7 @@ color: white;
 }
 
 .mobile-menu .burger-nav a {
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
     display: block;
     color: #FDE56D;
     text-decoration: none;
