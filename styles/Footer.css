@@ -1,8 +1,9 @@
+/*Код CSS отвечающий за Footer*/
 .Footer{
     display: flex;
     height: 100px;
     background: linear-gradient(to right, #A25532, #DB8C3D, #FFBC4D, #FDE56D);
-    width: 100vw;
+    width: 98.9vw;
     margin-top: auto;
     align-items: center;
     justify-content: flex-end;
@@ -25,7 +26,7 @@ height: 50px;
 cursor: pointer;
 margin-right: 30px;
 }
-.Vk{
+.Phone{
 width: 50px;
 height: 50px;
 cursor: pointer;

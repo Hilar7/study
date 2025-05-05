@@ -1,3 +1,4 @@
+/*Код CSS отвечающий за: Обводку всего текста, шрифт, панель сайта, фон сайта, Header, навигационную панель и загрузку при обновлении сайта*/
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +11,10 @@
     -1px 1px 0 black,
     1px 1px 0 black;
     font-size: 24px;
+}
+a:hover {
+    color: white !important;
+    text-decoration: none !important;
 }
 
         .MainFrame{
@@ -36,7 +41,7 @@
 .Header{
     display: flex;
     justify-content: space-between;
-    width: calc(100% + 12.4%);
+    width: 99vw;
     height: 100px;
     margin-bottom: 130px;
     background: linear-gradient(to right, #A25532, #DB8C3D, #FFBC4D, #FDE56D);
