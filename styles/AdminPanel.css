@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Russo One';
+    color:white;  
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    font-size: 24px;    
+}
+body{
+    background-color:rgb(54, 57, 63) ;
+}
+.AdminLoginFrame{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.AdminLogin{
+    width: 60%;
+    height: 50%;
+    background: linear-gradient(45deg, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+.AdminLoginInner{
+    width: 97%;
+    height: 95%;
+    background-color: rgb(54, 57, 63);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.FieldBlock{
+    width: 75%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+.InputField{
+    width: 100%;
+    height: 27%;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+}
+input[type="text"], input[type="password"]{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #cfcfcf;
+    border-radius: 50px;
+    outline: none;
+    background-color: #d9d9d9;   
+    color: #ffffff;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+input[type="text"]::placeholder, input[type="password"]::placeholder{
+    color: #ffffff;
+    font-style: italic;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+.glowing-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+.glowing-input::placeholder {
+    color: #ffffff;
+    font-style: italic;
+    opacity: 1; /* По умолчанию плейсхолдер виден */
+    transition: opacity 0.3s ease; /* Плавное исчезновение */
+}
+
+.glowing-input:focus::placeholder {
+    opacity: 0; /* При фокусе плейсхолдер становится прозрачным */
+}
+
+.glowing-input:focus {
+    border-color: transparent;
+    animation: glowing-border 2s infinite;
+}
+
+@keyframes glowing-border {
+    0% {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px #007BFF;
+    }
+    25% {
+        border-color: #208bfe;
+        box-shadow: 0 0 5px #208bfe;
+    }
+    50% {
+        border-color: #4ea3ff;
+        box-shadow: 0 0 20px #4ea3ff;
+    }
+    75% {
+        border-color: #208bfe;
+        box-shadow: 0 0 20px #208bfe;
+    }
+    100% {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px #007BFF;
+    }
+}
+.AuthorizationButton{
+    width: 75%;
+    height: 12%;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: #36393F;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.AuthorizationButton:before {
+    content: '';
+    background: linear-gradient(to right, #007BFF, #208bfe, #4ea3ff, #007BFF);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+}
+
+.AuthorizationButton:active {
+   color:#ffffff;
+}
+
+.AuthorizationButton:active:after {
+    background: transparent;
+}
+
+.AuthorizationButton:hover:before {
+    opacity: 1;
+}
+
+.AuthorizationButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #A25532, #DB8C3D, #FFBC4D, #FDE56D, #FFBC4D, #DB8C3D, #A25532);
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(54, 57, 63, 0.9);
+    padding: 20px 40px;
+    border-radius: 50px;
+    color: #FDE56D;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.success-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

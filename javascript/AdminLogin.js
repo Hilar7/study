@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const submitButton = document.querySelector('.RegOnConsultationButton2');
+    const submitButton = document.querySelector('.AuthorizationButton');
     const successMessage = document.querySelector('.success-message');
     const inputFields = document.querySelectorAll('.InputField input');
     
