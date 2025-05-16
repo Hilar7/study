@@ -1,15 +1,21 @@
-
+// Ожидаем полной загрузки DOM перед выполнением скрипта
 document.addEventListener('DOMContentLoaded', function() {
+    // Получаем элементы со страницы:
+    // Кнопка отправки формы
     const submitButton = document.querySelector('.AuthorizationButton');
-    const successMessage = document.querySelector('.success-message');
+
+    // Поля ввода в форме
     const inputFields = document.querySelectorAll('.InputField input');
     
 
+    // Для каждого поля ввода добавляю иконку ошибки и обработчики событий
     inputFields.forEach(input => {
+        // Создаю элемент иконки ошибки
         const errorIcon = document.createElement('span');
         errorIcon.className = 'error-icon';
         errorIcon.innerHTML = '❌';
-        errorIcon.style.display = 'none';
+        errorIcon.style.display = 'none'; // Изначально скрыта
+        // Позиционирую иконку справа внутри поля ввода
         errorIcon.style.position = 'absolute';
         errorIcon.style.right = '15px';
         errorIcon.style.top = '50%';
@@ -17,43 +23,46 @@ document.addEventListener('DOMContentLoaded', function() {
         errorIcon.style.color = 'red';
         errorIcon.style.fontSize = '20px';
         errorIcon.style.pointerEvents = 'none';
-        
+
+        // Устанавливаю относительное позиционирование для родительского элемента (relative)
         input.parentElement.style.position = 'relative';
         input.parentElement.appendChild(errorIcon);
         
-        // Сбрасываем ошибку при вводе
+        // Обработчик ввода данных - сбрасываю иконку ошибки при начале ввода
         input.addEventListener('input', function() {
-            this.style.borderColor = '#cfcfcf';
-            this.nextElementSibling.style.display = 'none';
+            this.style.borderColor = '#cfcfcf'; // Возвращаю стандартный цвет рамки
+            this.nextElementSibling.style.display = 'none'; // Скрываю иконку ошибки
         });
     });
     
+   // Событие по клику по кнопке отправки формы
     submitButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        let allFilled = true;
+        e.preventDefault(); // Предотвращаю стандартное поведение формы
+        let allFilled = true; // Флаг для проверки заполненности всех полей
         
-        // Проверяем каждое поле
+        // Проверяю каждое поле на заполненность
         inputFields.forEach(input => {
-            if (!input.value.trim()) {
+            if (!input.value.trim()) { // Если поле пустое или содержит только пробелы
                 allFilled = false;
-                input.style.borderColor = 'red';
-                input.nextElementSibling.style.display = 'block';
+                input.style.borderColor = 'red'; // Подсвечиваю поле красным
+                input.nextElementSibling.style.display = 'block'; // Показываю иконку ошибки
                 
-                // Анимация "тряски" для пустого поля
+                // Добавляю анимацию "тряски" для пустого поля
                 input.style.animation = 'shake 0.5s';
                 setTimeout(() => {
-                    input.style.animation = '';
+                    input.style.animation = ''; // Убираю анимацию через 0.5 секунды
                 }, 500);
             }
         });
         
+        // Если не все поля заполнены
         if (!allFilled) {
-            // Анимация для кнопки при ошибке
+            // Добавляю анимацию "тряски" для кнопки
             this.style.animation = 'shake 0.5s';
             setTimeout(() => {
                 this.style.animation = '';
             }, 500);
-            return;
+            return; // Прекращаю выполнение функции
         }
         
         // Если все поля заполнены
@@ -70,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     });
     
-    // Добавляем стиль для анимации тряски
+   // Создаю и добавляю стиль для анимации "тряски"
     const style = document.createElement('style');
     style.textContent = `
         @keyframes shake {
@@ -108,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Добавляем стиль для анимации пульсации
+    // Добавляем стиль для анимации "пульсации"
     const style = document.createElement('style');
     style.textContent = `
         @keyframes pulse {

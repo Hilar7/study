@@ -30,12 +30,12 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 0 15px rgba(253, 229, 109, 0.8); /* Подсветка */
-    transition: box-shadow 0.3s ease; /* Плавная анимация */
+    box-shadow: 0 0 15px rgba(253, 229, 109, 0.8); 
+    transition: box-shadow 0.3s ease; 
 }
 
 .comment:hover {
-    box-shadow: 0 0 25px rgba(253, 229, 109, 1); /* Усиление подсветки при наведении */
+    box-shadow: 0 0 25px rgba(253, 229, 109, 1);
 }
 .carousel-control-next-icon{
 background-image:url(../img/ArrowNext.svg) !important;

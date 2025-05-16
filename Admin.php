@@ -1,3 +1,4 @@
+<?php include 'PHPscripts/connect.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
                         <input type="password" placeholder="Password" class="glowing-input">
                         </div>
             </div>
-            <button class="AuthorizationButton"> Log in</button>
+            <button class="AuthorizationButton">Log in</button>
         </div>
     </div>
 </div> 
