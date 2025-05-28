@@ -1,0 +1,92 @@
+/* Стили для модального окна согласия */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Russo One';
+    color:white;  
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    font-size: 24px;
+}
+.modal {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none; /* По умолчанию скрыто */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #2F353B !important; 
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.btn-accept {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  flex: 1;
+}
+
+.btn-accept:hover {
+  background: #3e8e41;
+}
+
+.btn-reject {
+  background: #f44336;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  flex: 1;
+}
+
+.btn-reject:hover {
+  background: #d32f2f;
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.modal p {
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 0;
+}

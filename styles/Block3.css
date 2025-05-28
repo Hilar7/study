@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
     align-items: center;
 }
 .Text1Block3{
@@ -21,7 +21,7 @@
     margin-bottom: 40px;
 }
 .Table1Block3{
-    background-color: #36393F;
+    background-color: #2F353B;
     width: 95.162%;
     height: 96.774%;
     display: flex;

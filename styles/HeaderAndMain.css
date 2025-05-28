@@ -29,21 +29,21 @@ a:hover {
 
     .WebsitePanel{
     padding: 0 5%;
-    width: 89.583vw;
-    height: 6530px;
+    width: 100%;
+    height: 6000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 0;
-    background-color:rgba(54, 57, 63, 0.95);  
+    background-color:rgba(47, 53, 59, 0.9);  
 }
 
 .Header{
     display: flex;
     justify-content: space-between;
-    width: 99vw;
+    width: 98.8vw;
     height: 100px;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
     background: linear-gradient(to right, #A25532, #DB8C3D, #FFBC4D, #FDE56D);
     align-items: center;
 }
@@ -69,35 +69,35 @@ align-items: center;
 }
 
 .Nav{
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
+} 
 .NavButton1{
-width: 21%;
+width: 19%;
 font-size: 20px;
 margin-bottom: 0px;
 text-decoration: none;
 color: white;
 }
 .NavButton2{
-width: 22%;
+width: 16%;
 font-size: 20px;
 margin-bottom: 0px;
 text-decoration: none;
 color: white;
 }
 .NavButton3{
-width: 30%;
+width: 21%;
 font-size: 20px;
 margin-bottom: 0px;
 text-decoration: none;
 color: white;
 }
 .NavButton4{
-width: 16%;
+width: 12%;
 font-size: 20px;
 margin-bottom: 0px;
 text-decoration: none;
@@ -282,7 +282,7 @@ color: white;
 .mobile-menu input { display: none; }
 
 .mobile-menu input:checked + .menu {
-    box-shadow: 0 0 0 100vw #36393F, 0 0 0 100vh #36393F;
+    box-shadow: 0 0 0 100vw #2F353B, 0 0 0 100vh #2F353B;
     position: fixed; 
     right: 20px;
     top: 20px;

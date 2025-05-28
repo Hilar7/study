@@ -1,6 +1,10 @@
+<?php
+// Подключаю трекинг
+require_once 'PHPscripts/track_visitor.php'; ?>
 <!DOCTYPE html>
 <html lang="ru">
-<head>   
+<head>
+       
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 
     <meta charset="UTF-8">
@@ -15,6 +19,7 @@
     <link rel="stylesheet" href="styles/Block5.css">
     <link rel="stylesheet" href="styles/CommentBlock.css">
     <link rel="stylesheet" href="styles/Footer.css">
+    <link rel="stylesheet" href="styles/PersonalData.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -26,14 +31,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <!-- подключение скриптового файла фреймворка bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body> 
+    
    <div class="loader">
         <div class="loader-inner">
             <div class="loader-line-wrap">
@@ -382,7 +387,69 @@ if ($result->num_rows > 0) {
 ?>
     </div>
     </div>
+    <!-- Модальное окно согласия -->
+<div id="privacyModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Согласие на обработку данных</h3>
+    <p>Мы используем ваши данные для улучшения работы сайта. Продолжая использование, вы соглашаетесь с этим.</p>
+    <div class="modal-buttons">
+      <button id="acceptPrivacy" class="btn-accept">Принять</button>
+      <button id="rejectPrivacy" class="btn-reject">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<div id="privacyModal" class="modal">
+  <div class="modal-content">
+    <h3>Согласие на обработку данных</h3>
+    <p>Мы используем ваши данные для улучшения работы сайта. Продолжая использование, вы соглашаетесь с этим.</p>
+    <div class="modal-buttons">
+      <button id="acceptPrivacy" class="btn-accept">Принять</button>
+      <button id="rejectPrivacy" class="btn-reject">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // устанавливаю небольшую задержку 
+  // Это дает странице время полностью подготовиться к отображению
+  setTimeout(() => {
+    // проверяю, не сделал ли уже пользователь выбор (проверяю localStorage)
+    if (!localStorage.getItem('privacyChoice')) {
+      // Если выбор не сделан - показываю модальное окно
+      document.getElementById('privacyModal').style.display = 'flex';
+    }
+  }, 100);
+
+  // добавляю обработчик клика на кнопку принятия политики
+  document.getElementById('acceptPrivacy').addEventListener('click', function() {
+    // Сохраняю выбор пользователя в localStorage
+    localStorage.setItem('privacyChoice', 'accepted');
+    // Скрываю модальное окно
+    document.getElementById('privacyModal').style.display = 'none';
+    // Отправляю AJAX-запрос на сервер чтобы сохранить выбор
+    fetch('track_visitor.php?privacy_choice=accept')
+      // После успешной отправки перезагружаю страницу
+      .then(() => window.location.reload());
+  });
+
+  // добавляю обработчик клика на кнопку отклонения политики
+  document.getElementById('rejectPrivacy').addEventListener('click', function() {
+    // Сохраняю выбор пользователя в localStorage
+    localStorage.setItem('privacyChoice', 'rejected');
+    // Скрываю модальное окно
+    document.getElementById('privacyModal').style.display = 'none';
+    // Отправляю AJAX-запрос на сервер чтобы сохранить выбор
+    fetch('track_visitor.php?privacy_choice=reject')
+      // После успешной отправки перезагружаю страницу
+      .then(() => window.location.reload());
+  });
+});
+</script>
 <script src="javascript/reload.js"></script>
 <script src="javascript/burger.js"></script>
 <script src="javascript/RegOnConsultation.js"></script>
+</body>
 </html>     
